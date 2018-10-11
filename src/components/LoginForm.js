@@ -36,7 +36,11 @@ class LoginForm extends Component {
     if (this.state.loading) {
       return <Spinner size="small" />;
     }
-    return <Button onPress={() => this.onButtonPress()}>Log in</Button>;
+    return (
+      <Button style={{ flex: 1 }} onPress={() => this.onButtonPress()}>
+        Log in
+      </Button>
+    );
   }
 
   render() {
