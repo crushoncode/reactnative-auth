@@ -8,6 +8,9 @@ class LoginForm extends Component {
 
   onButtonPress() {
     const { email, password } = this.state;
+
+    this.setState({ error: '' });
+
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
